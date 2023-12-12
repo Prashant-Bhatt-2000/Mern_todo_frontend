@@ -10,11 +10,6 @@ const NavBar = () => {
     const token = Cookies.get('token');
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (!token) {
-            navigate('/login');
-        }
-    }, [token, navigate]);
 
     const logout = ()=> {
         Cookies.remove('token')
